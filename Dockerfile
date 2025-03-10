@@ -1,7 +1,9 @@
-FROM nginx:alpine
+FROM unitymultiplay/linux-base-image:latest
 
-WORKDIR /etc/nginx/conf.d
-COPY webgl.conf default.conf
+# copy game files here
+# for example:
+WORKDIR /game
+COPY --chown=mpukgame . .
 
-WORKDIR /webgl
-COPY webgl/ .
+# set your game binary as the entrypoint
+ENTRYPOINT [ "./gamebinary" ]
