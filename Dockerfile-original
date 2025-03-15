@@ -3,10 +3,10 @@ FROM nginx:alpine
 WORKDIR /etc/nginx/conf.d
 COPY webgl.conf default.conf
 
-RUN ls la
+RUN ls -la
 
 WORKDIR /webgl
 
-RUN ls la
+RUN ls -la
 
 COPY webgl/ .
