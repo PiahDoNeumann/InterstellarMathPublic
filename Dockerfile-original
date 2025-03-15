@@ -10,3 +10,5 @@ WORKDIR /webgl
 RUN ls -la
 
 COPY webgl/ .
+
+RUN ls -la
