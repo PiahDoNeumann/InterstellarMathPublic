@@ -12,3 +12,5 @@ RUN ls -la
 COPY webgl/ .
 
 RUN ls -la
+
+RUN pwd
